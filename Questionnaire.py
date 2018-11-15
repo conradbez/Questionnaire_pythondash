@@ -112,8 +112,7 @@ app.layout = html.Div([
     "background-color" : ' #e6e6e6',
     "height" :78,
     "position" : "relative"
-    }),
-# html.Img(src='advisengine.png'),
+    })
 ])
 
 
