@@ -212,7 +212,7 @@ index_page = html.Div([
 
 #Page 1
 page_1_layout = html.Div([
-    html.H1(dcc.Markdown(''' **1. Question 1 ?**''') ,style={
+    html.H1(dcc.Markdown(''' **Question 1 ?**''') ,style={
                'top':200,
                'left' : 700,
                'color': '#4a5062',
@@ -268,7 +268,7 @@ def page_1_dropdown(value):
 page_2_layout = html.Div([
     html.Div(id='page-2-content'),
     html.Br(),
-    html.H1(dcc.Markdown(''' **2. Question 2 :**''') ,style={
+    html.H1(dcc.Markdown(''' **Question 2 ?**''') ,style={
                'top':150,
                'left':700,
                'color': '#4a5062',
@@ -338,7 +338,7 @@ def page_2_radios(value):
 page_3_layout = html.Div([
     html.Div(id='page-3-content'),
     html.Br(),
-    html.H1(dcc.Markdown(''' **3. Question 3**''') ,style={
+    html.H1(dcc.Markdown(''' **Question 3 ?**''') ,style={
                'top':180,
                'left':620,
                'padding-right':800,
@@ -405,7 +405,7 @@ def page_3_radios(value):
 page_4_layout = html.Div([
     html.Div(id='page-4-content'),
     html.Br(),
-    html.H1(dcc.Markdown(''' **4. Question 4**''') ,style={
+    html.H1(dcc.Markdown(''' **Question 4 ?**''') ,style={
                'top':200,
                'left':700,
                'padding-right':800,
@@ -494,7 +494,7 @@ def page_4_radios(value):
 page_5_layout = html.Div([
     html.Div(id='page-5-content'),
     html.Br(),
-    html.H1(dcc.Markdown(''' **5. Question 5 ?**''') ,style={
+    html.H1(dcc.Markdown(''' **Question 5 ?**''') ,style={
                'top':150,
                'left':500,
                'padding-right':800,
@@ -584,7 +584,7 @@ def page_5_radios(value):
 page_6_layout = html.Div([
     html.Div(id='page-6-content'),
     html.Br(),
-    html.H1(dcc.Markdown(''' **6. Question 6**''') ,style={
+    html.H1(dcc.Markdown(''' **Question 6 ?**''') ,style={
                'top':200,
                'left':325,
             #    'padding-right':800,
@@ -745,7 +745,7 @@ def page_6_radios(value):
 page_8_layout = html.Div([
     html.Div(id='page-8-content'),
     html.Br(),
-    html.H1(dcc.Markdown(''' **7. Question 7**''') ,style={
+    html.H1(dcc.Markdown(''' **Question 7 ?**''') ,style={
                'top':180,
                'left':620,
                'padding-right':800,
@@ -812,7 +812,7 @@ def page_8_radios(value):
 page_8_1_layout = html.Div([
     html.Div(id='page-8-1-content'),
     html.Br(),
-    html.H1(dcc.Markdown(''' **7. Question**''') ,style={
+    html.H1(dcc.Markdown(''' **7. Question(Extra) ?**''') ,style={
                'top':180,
                'left':620,
                'padding-right':800,
@@ -879,7 +879,7 @@ def page_8_1_radios(value):
 page_9_layout = html.Div([
     html.Div(id='page-9-content'),
     html.Br(),
-    html.H1(dcc.Markdown(''' **Question 8**''') ,style={
+    html.H1(dcc.Markdown(''' **Question 8 ?**''') ,style={
                'top':180,
                'left':620,
                'padding-right':800,
@@ -946,7 +946,7 @@ def page_9_radios(value):
 page_10_layout = html.Div([
     html.Div(id='page-10-content'),
     html.Br(),
-    html.H1(dcc.Markdown(''' **9. Question 9**''') ,style={
+    html.H1(dcc.Markdown(''' **Question 9 ?**''') ,style={
                'top':200,
                'left':420,
                'padding-right':800,
