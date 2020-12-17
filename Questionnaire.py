@@ -8,10 +8,6 @@ print(dcc.__version__) # 0.6.0 or above is required
 
 
 app = dash.Dash(__name__,external_stylesheets=["https://codepen.io/chriddyp/pen/bWLwgP.css"]
-
-
-
-
 )
 
 # Since we're adding callbacks to elements that don't exist in the app.layout,
@@ -921,4 +917,4 @@ def display_page(pathname):
     # You could also return a 404 "URL not found" page here
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, port= 8080)

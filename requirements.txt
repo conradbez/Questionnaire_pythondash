@@ -3,3 +3,4 @@ dash-html-components
 dash-core-components
 dash-table
 chart_studio
+dash_bootstrap_components
