@@ -2,12 +2,17 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 import plotly.graph_objs as go
-import plotly.plotly as py
+import chart_studio.plotly as py
 
 print(dcc.__version__) # 0.6.0 or above is required
 
 
-app = dash.Dash()
+app = dash.Dash(__name__,external_stylesheets=["https://codepen.io/chriddyp/pen/bWLwgP.css"]
+
+
+
+
+)
 
 # Since we're adding callbacks to elements that don't exist in the app.layout,
 # Dash will raise an exception to warn us that we might be
@@ -197,7 +202,7 @@ page_2_layout = html.Div([
                 {'label': 'Option C', 'value': 'C'},
                 {'label': 'Option D', 'value': 'D'}
             ],
-            values=['B'],
+            # values=['B'],
              labelStyle={'display': 'block'},
             style = {
             "font-size" : 24,
@@ -560,98 +565,6 @@ page_6_layout = html.Div([
 def page_6_radios(value):
     return 'You have selected "{}"'.format(value)
 
-#page 7
-# page_7_layout = html.Div([
-#     html.Div(id='page-7-content'),
-#     html.Br(),
-#     html.H1(dcc.Markdown(''' **7. Question 7**''') ,style={
-#                'top':150,
-#                'left':500,
-#                'padding-right':800,
-#                'color': '#4a5062',
-#                "font-size" : 30,
-#                'position': 'relative',
-#                'font-family' : 'sans-serif',
-#                'align':"justify"
-#            }),
-#     html.Div(
-#            [
-#                dcc.Slider(
-#                       min=1,
-#                       max=100,
-#                    marks={i*10: '{}'.format(i*10) for i in range(10+1)},
-#                           value=40,
-#                           vertical='True'
-#                   ),
-#                     #   html.H1(dcc.Markdown(''' **Year**'''),style={
-#                 #              'top':25,
-#                 #              'left':1,
-#                 #             #  'padding-right':800,
-#                 #              'color': '#4a5062',
-#                 #              "font-size" : 20,
-#                 #              'position': 'relative',
-#                 #             #  'font-family' : 'sans-serif',
-#                   #
-#                 #          }),
-#            ],
-#
-#            style={'position': 'relative','left': 930,'top' : 180,'height':400}
-#        ),
-#             html.A(html.Button('Back' , style={
-#                    'width' : 115,
-#                    'height'  : 55,
-#                    'position': 'absolute',
-#                 'text-align': 'center',
-#                    'left': 700,
-#                    'top' : 750,
-#                    'border-radius': 12,
-#                     'background' : '#fff',
-#                     'border-color':'#1b93ee',
-#                    'color': '#1b93ee',
-#                    'border-width' : 1,
-#                    "font-family": "sans-serif",
-#                    "font-size" : 18,
-#                }),
-#                href='/page-6'),
-#         html.A(html.Button('Next' , style={
-#                'width' : 115,
-#                'height'  : 55,
-#                'position': 'absolute',
-#             'text-align': 'center',
-#                'left': 880,
-#                'top' : 750,
-#                'border-radius': 12,
-#                 'background' : '#fff',
-#                 'border-color':'#1b93ee',
-#                'color': '#1b93ee',
-#                'border-width' : 1,
-#                "font-family": "sans-serif",
-#                "font-size" : 18,
-#            }),
-#            href='/page-8'),
-#            html.A(html.Button('Skip' , style={
-#                   'width' : 115,
-#                   'height'  : 55,
-#                   'position': 'absolute',
-#                'text-align': 'center',
-#                   'left': 1060,
-#                   'top' : 750,
-#                   'border-radius': 12,
-#                    'background' : '#fff',
-#                    'border-color':'#1b93ee',
-#                   'color': '#1b93ee',
-#                   'border-width' : 1,
-#                   "font-family": "sans-serif",
-#                   "font-size" : 18,
-#               }),
-#               href='/page-8')
-# ])
-#
-# @app.callback(dash.dependencies.Output('page-7-content', 'children'),
-#               [dash.dependencies.Input('page-7-radios', 'value')])
-# def page_7_radios(value):
-#     return 'You have selected "{}"'.format(value)
-
 #page 8
 page_8_layout = html.Div([
     html.Div(id='page-8-content'),
@@ -937,18 +850,6 @@ page_11_layout = html.Div([
                'align':"justify"
            }),
 
-#         dcc.Graph(
-#         id='example-graph-2',
-# figure = {"data": [base_chart, meter_chart],
-# "layout" : layout
-# },
-# style={
-#
-#        'position': 'absolute',
-#        'left': 750,
-#        'top' : 189,
-#    }
-#     ),
             html.A(html.Button('Back' , style={
                    'width' : 130,
                    'height'  : 55,
@@ -1018,11 +919,6 @@ def display_page(pathname):
     else:
         return index_page
     # You could also return a 404 "URL not found" page here
-
-app.css.append_css({
-    'external_url': 'https://codepen.io/chriddyp/pen/bWLwgP.css'
-})
-
 
 if __name__ == '__main__':
     app.run_server(debug=True)
